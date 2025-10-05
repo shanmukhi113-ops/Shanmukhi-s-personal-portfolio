@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
+//<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--STYLING THE WHOLE WEBPAGE USING ASTERICK-->
+    <style>
+        * 
+        {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif; 
+        }
+    </style>
+    <!--STYLING THE DEFAULT COLOR OF THE MAIN PAGE-->
+    <style>
+        body
+        {
+            background-color: #000000;
+        }
+    </style>
+
+    <nav class="navbar">
+        <a href="#" class="portfoliologo">Personal Portfolio.</a>
+        <ul>
+            <li>    <a href="#homepage">Home</a>    </li>
+            <li>    <a href="#aboutpage">About</a>    </li>
+            <li>    <a href="#educationpage">Education</a>    </li>
+            <li>    <a href="#experiencepage">Experience</a>    </li>
+            <li>    <a href="#contactpage">Contact</a>    </li>
+        </ul>
+
+        <style>
+        a
+        {
+            color:#8ae90f;
+            text-decoration:none;
+        }
+        </style>
+        <style>
+            .navbar
+            {
+                left:0;
+                right:0;
+                top:0;
+                width:100%;
+                padding: 27px 9%;
+                position: fixed;
+                background-color:black;
+                border:#8ae90f;
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 100;
+            }
+        </style>
+        <style>
+            .navbar .portfoliologo
+            {
+                font-size:30px;
+                font-weight: 700;
+            }
+        </style>
+        <style>
+            .navbar ul
+            {
+                display: flex;
+            }
+        </style>
+        <style>
+            .navbar ul li
+            {
+                list-style:none;
+                margin-left:30px;
+                font-weight:400;
+            }  
+        </style>
+        <style>
+            .navbar ul li a
+            {
+                font-size:20px;
+                font-weight:500;
+                transition: 0.3s;
+            }
+        </style>
+        <!--STYLING THE CLICKABLE TEXT WHEN HOVERING MOUSE TO SHOW WHITE COLOR-->
+        <style>
+            .navbar ul li:hover a
+            {
+                color: #ffffff;
+                text-shadow: 2px 2px 8px grey;
+            }
+        </style>
+        <!--STYLING THE CLICKABLE TEXT WHEN IT IS ACTIVE TO SHOW WHITE COLOR-->
+        <style>
+            .navbar ul li:active a:active
+            {
+                color: #ffffff;
+                text-shadow: 2px 2px 8px grey;
+            }
+        </style>
+    </nav>
+    <div class="mainbg-image"> </div>
+
+    <style>
+        .mainbg-image
+            {
+                background-image:url('ZimZams.jpeg');
+                left:0;
+                right:0;
+                position:fixed;
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+                background-size:cover;
+                opacity:0.2;
+                width:100%;
+                height:100%;
+                display:flex;
+                justify-content:center;
+                overflow:hidden;
+            }
+    </style>
+    <!--MAKING THE NAVBAR AND ITS COMPONENTS RESPONSIVE ON DIFFERENT DEVICES AND DIMENSIONS-->
+    <style>
+        @media (max-width: 992px) 
+            {
+                .navbar 
+                {
+                    padding: 20px 5%;
+                }
+                .navbar .portfoliologo 
+                {
+                    font-size: 26px;
+                }
+                .navbar ul li 
+                {
+                    margin-left: 20px;
+                }
+                .navbar ul li a 
+                {
+                    font-size: 18px;
+                }
+            }
+        @media (max-width: 768px) 
+            {
+                .navbar 
+                {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 10px 5%;
+                }
+                .navbar ul 
+                {
+                    flex-direction: column;
+                    width: 100%;
+                    margin-top: 10px;
+                }
+                .navbar ul li 
+                {
+                    margin-left: 0;
+                    margin-bottom: 10px;
+                }
+                .navbar ul li a 
+                {
+                    font-size: 20px;
+                }
+            }
+        @media (max-width: 576px) 
+            {
+                .navbar 
+                {
+                    padding: 5px 5%;
+               }
+                .navbar .portfoliologo 
+                {
+                    font-size: 22px;
+                }
+                .navbar ul li a 
+                {
+                    font-size: 18px;
+                }
+            }
+        @media (max-width: 768px) 
+            {
+                .mainbg-image 
+                {
+                    background-attachment: scroll;
+                }
+            }
+  </style>
+<!-----------------------------------------------------------HOMEPAGE---------------------------------------------------------->
+    <section id="homepage" class="home">
+        <!--APPLYING STYLING EFFECTS TO ALL ELEMENTS OF HOME PAGE-->
+        <style>
+            .home
+            {
+                display:flex;
+                align-items:center;
+                height:100vh;
+                padding:60px 9% 0;
+                color:#ffffff;
+            }
+        </style>
+        <div class="home-info">
+            <h1>Shanmukhi</h1>
+            <h2><u><i>Student</i></u> of Tech. <u><i>Writer</i></u> with Purpose. <br><u><i>Creator</i></u> by Instinct.</h2>
+            <p>CS Undergrad <b>@Scaler School of Technology 2029</b> | <b>BITS Pilani 2028</b> | Member of <b>Studio 404</b> | Social Media Intern @ Sojo's Cafe | Content Writer | <br>AISSCE X School Topper 2021 <b>CBSE 98.4%</b> | Ex <b>Head-Girl</b> @LSS 2021 & KV 2022</p>
+            <div class="fontawesome">
+                <div class="fontawesomelinkedin">
+                    <a href="http://www.linkedin.com/in/shanmukhi-333333333333333333333333"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a>
+                </div>
+                <div class="fontawesomegithub">
+                    <a href="https://github.com/shanmukhi113-ops"> <i class="fa fa-github" aria-hidden="true"></i>   </a>
+                </div>
+                <div class="fontawesomegmail">
+                    <a href="mailto:shanmukhi.25bcs10349@gmail.com"> <i class="fa fa-envelope" aria-hidden="true"></i>   </a>
+                </div>
+            </div>
+            
+        </div>
+        <style>
+            .home-info h1
+            {
+                font-size:70px;
+                text-shadow: 2px 5px 8px gray;
+                overflow:hidden;
+                position:relative;
+            }
+        </style>
+        <style>
+            .home-info h2
+            {
+                font-size:25px;
+                margin-top: -10px;
+                color: rgb(138, 233, 15);
+                overflow:hidden;
+                position:relative;
+            }
+        </style>
+        <style>
+            .home-info p
+            {
+                font-size:16px;
+                margin-top:10px 0 25px;
+                overflow:hidden;
+                position:relative;
+            }
+        </style>
+        <style> 
+            .fontawesome
+            {
+                display:flex;
+                flex-direction:row;
+                justify-content: space-around;
+                padding: 0.1px;
+                font-size: 30px;
+                margin:0.1px;
+                width: 30px;
+                text-align: center;
+                border-radius: 50%;
+                color:#8ae90f;
+                
+            }
+            .fontawesomelinkedin:hover, .fontawesomegithub:hover, .fontawesomegmail:hover
+            {
+                opacity: 0.7;
+            }
+            .fontawesomelinkedin, .fontawesomegithub, .fontawesomegmail
+            {
+                padding: 5px;
+                border: 5px;
+                margin: 2px;
+                position:relative;
+            }
+        </style>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="pfp.png" alt="Shanmukhi's profile picture">
+                </div>
+            </div>
+        </div>
+        <style>
+            .home-img .img-box
+            {
+                width:32vw;
+                height:32vw;
+                border-radius:50% rgb(138, 233, 15);
+                padding: 5px;
+            }
+        </style>
+        <style>
+            .home-img .img-box .img-item
+            {
+                position:relative;
+                width:100%;
+                height:100%;
+                border-radius:50%;
+                display:flex;
+                justify-content:center;
+                overflow:hidden;
+            }
+        </style>
+        <style>
+            .home-img .img-box .img-item img
+            {
+                position:absolute;
+                width:85%;
+                display:block;
+                border-radius:50%;
+                border: 2px solid rgb(255, 255, 255);
+                object-fit:cover;
+                top:30px;
+                box-shadow: 0px 0px 10px 5px  #8ceb0f;
+            }
+        </style>
+        <style>
+            .home-img .img-box 
+            {
+                width: 32vw;
+                height: 32vw;
+                border-radius: 50%;
+                padding: 5px;
+                border: 5px solid rgba(138,233,15,0.6);
+                overflow: visible;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: border 0.5s ease, box-shadow 0.5s ease;
+            }
+
+            .home-img .img-box .img-item 
+            {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .home-img .img-box .img-item img 
+            {
+                position: absolute;
+                width: 85%;
+                height: auto;
+                border-radius: 50%;
+                border: 2px solid white;
+                object-fit: cover;
+                top: 30px;
+                box-shadow: 0 0 10px 5px #8ceb0f;
+                transition: transform 0.5s ease, box-shadow 0.5s ease;
+                will-change: transform, box-shadow;
+            }
+
+            .home-img .img-box .img-item img 
+            {
+                animation: floatCircle 6s ease-in-out infinite;
+            }
+
+            .home-img .img-box .img-item:hover img,.home-img .img-box .img-item:focus img 
+            {
+                animation-play-state: paused;  
+                transform: scale(1.15) translateY(-5px);
+                 box-shadow: 0 0 40px 12px rgba(138,233,15,0.9);
+            }
+
+            .home-img .img-box:hover 
+            {
+                border-color: rgba(138,233,15,1);
+                box-shadow: 0 0 30px 10px rgba(138,233,15,0.8);
+            }
+
+        </style>
+        <!--USING MEDIA QUERIES TO MAKE THE HOME PAGE RESPONSIVE ON DIFFERENT DEVICES AND DIMENSIONS-->
+        <style>
+            @media (max-width: 900px) 
+            {
+                .home-content 
+                {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .home-info 
+                {
+                    margin-right: 0;
+                    text-align: center;
+                }
+                .img-box 
+                {
+                     width: 250px;
+                    height: 250px;
+                }
+            }
+
+            @media (max-width: 600px) 
+            {
+                .home-info h1 
+                {
+                    font-size: 2.5rem;
+                }
+                .home-info h2 
+                {
+                    font-size: 1.2rem;
+                }
+                .home-info p 
+                {
+                    font-size: 0.9rem;
+                }
+                .img-box 
+                {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+            @media screen and (max-width: 480px) 
+            {
+                .home-img .img-box 
+                {
+                    width: 50vw;
+                    height: 50vw;
+                    padding: 4px;
+                }
+                .home-img .img-box .img-item img 
+                {
+                    transition: transform 0.4s ease, box-shadow 0.4s ease;
+                }
+                .home-img .img-box .img-item:hover img 
+                {
+                    transform: scale(1.1) translateY(-4px);
+                    box-shadow: 0 0 30px 8px rgba(138,233,15,0.8);
+                }
+            }
+        </style>
+    </section>
+
+    <!----------------------------------------------------ABOUT PAGEE------------------------------------------------------------>
+
+    <section id="aboutpage" class="about">
+        <!--STYLING THE WHOLE ABOUT PAGE -->
+        <style>
+            .about
+            {
+                display:flex;
+                align-items:center;
+                height:100vh;
+                padding:60px 9% 0;
+                color:#8ceb0f;
+                overflow:hidden;
+                position:relative;
+            }
+        </style>
+
+        <div class="about-info">
+            <h1> About > > </h1>
+            <div class="about-infobox">
+            <p>As a Computer Science undergraduate with a strong academic foundation and a deep passion for technology, I thrive on solving complex problems, exploring new tools and frameworks, and pushing myself to keep up with the pace of this rapidly evolving field. Alongside my technical interests, I am also an avid writer, whether its blog posts, creative writing, scripts or simply an advertisement.
+            <br>
+            <br>
+            With sole commitment to academics and skill upgradation, I have consistently topped throughout my school years alongside securing the all-rounder positions of the school. In leadership roles, I’ve served twice as the head-girl in the past and have effectively led the student council. I hold strong communication, coordination, and interpersonal skills that I utilise to deliver results in every team-event. 
+            <br>
+            <br>
+            Alongside, I am fascinated by user experience and interface design, and would love to explore UI/UX through both coursework and side projects. Video editing is another creative outlet I aim at learning as I believe in the magic of  putting together compelling visual stories to grasp design, pacing, and user engagement from a different perspective. </p>
+            </div>
+        </div>
+        <style>
+            .about-info h1
+            {
+                font-size:70px;
+                padding:20px;
+                text-shadow: 2px 2px 10px gray;
+            }
+        </style>
+        <style>
+            .about-infobox
+            {
+                margin: -10px;
+                height: 350px;
+                width: 1000px;
+                padding: 10px;
+                border: 10px solid #8ceb0f;
+                border-radius: 5px;
+                background-color:#8ceb0f;
+                box-shadow: 2px 2px 10px grey;
+            }
+        </style>
+        <style>
+            .about-info p
+            {
+                font-size:16px;
+                margin-top:10px 0 25px;
+                color: black;
+            }
+        </style>
+        <!--USING MEDIA QUERIES TO MAKE THE ABOUT PAGE RESPONSIVE ON ANY DEVICE/DIMENSION-->
+        <style>
+            @media screen and (max-width: 768px) 
+            {
+                .about 
+                {
+                    flex-direction: column;  
+                    height: auto;
+                    padding: 40px 5%;
+                }
+                .about-info h1 
+                {
+                    font-size: 40px;
+                    text-align: center;
+                    padding: 10px 0;
+                }
+                .about-infobox 
+                {
+                    width: 100%;
+                    max-width: 600px;
+                    border-width: 6px;
+                }
+                .about-infobox p 
+                {
+                    font-size: 15px;
+                    height:180px;
+                }
+            }
+
+            @media screen and (max-width: 480px) 
+            {
+                .about 
+                {
+                    padding: 20px 5%;
+                }
+                .about-info h1 
+                {
+                    font-size: 32px;
+                }
+                .about-infobox 
+                {
+                    border-width: 4px;
+                    padding: 15px;
+                }
+                .about-infobox p 
+                {
+                    font-size: 14px;
+                }
+            }
+        </style>
+    </section>
+    <!--ADDING SPACE BETWEEN THE ABOUT AND EDUCATION PAGE-->
+    <section class="blankspace1">
+        <style>
+            .blankspace1
+            {
+            height:200px;
+            }
+        </style>
+    </section>
+    
+    <!------------------------------------------------EDUCATION PAGE-------------------------------------------------------------->
+    <section id="educationpage" class="education">
+        <style>
+            .about
+            {
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                height:100vh;
+                padding:60px 9% 0;
+                overflow:hidden;
+                position:relative;
+            }
+        </style>
+        <div class="education-info">
+            <h1> Education</h1>
+        </div>
+        <style>
+            .education-info h1
+            {
+                font-size:70px;
+                color: #ff2176;
+                text-align:center;
+                text-shadow: 2px 2px 10px gray;
+                overflow:hidden;
+                position:relative;
+            }
+        </style>
+
+        <div class="keyhighlights">
+            <div class="intraschoolcompetitions">
+                <h2>35+ Intraschool Competitions</h2>
+            </div>
+            <div class="interschoolcompetitions">
+                <h2>10+ Interschool Competitions</h2>
+            </div>
+            <div class="olympiads">
+                <h2>10+ Olympiads</h2>
+            </div>
+            <div class="studentcouncil">
+                <h2>3X Student Council Representative</h2>
+            </div>
+        </div>
+        <style>
+            .keyhighlights
+            {
+                display:flex;
+                flex-direction:row;
+                justify-content:space-evenly;
+                font-size:12px;
+                margin-top: -10px;
+                color: rgb(117, 117, 117); 
+                overflow:hidden;
+                position:relative;
+                text-shadow: white;
+            }
+        </style>
+
+        <section class="blankspace2">
+            <style>
+                .blankspace2 
+                {
+                    height:40px;
+                }
+            </style>
+        </section>
+
+        <div class="timeline">
+            <div class="container1left">
+                <div class="content">
+                    <h2>Scaler School of Technology</h2>
+                    <p>Undergrad in Computer Science <br> 2025-2029 <br> Key Highlights: Studio 404 | Yugaantar Marketing & Promotions | JAVA | HTML | CSS | JavaScript</p>
+                </div>
+            </div>
+            <div class="container2right">
+                <div class="content">
+                    <h2>Birla Institute of Technology & Sciences</h2>
+                    <p>Bachelor of Computer Science <br>2025-2028</p>
+                </div>
+            </div>
+            <div class="container3left">
+                <div class="content">
+                    <h2>Kendriya Vidyalaya Picket</h2>
+                    <p>Senior Secondary Education in Science PCMB <br> 2022-2024 <br> Key Highlights: 92% CBSE | Head-Girl 2022-23</p>
+                </div>
+            </div>
+            <div class="container4right">
+                <div class="content">
+                    <h2>Little Scholar School</h2>
+                    <p>Primary & Secondary Education <br> 2012-2022 <br> Key Highlights: CBSE 98.4% | Head Girl 2021-22 | Proficiency Topper & All-Rounder of the Year 2012-2021</p>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .timeline 
+            {
+                position: relative;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .timeline::after 
+            {
+                content: '';
+                position: absolute;
+                width: 6px;
+                background-color: #ff2176;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                margin-left: -3px;
+            }
+
+            .container1left, .container2right, .container3left, .container4right
+            {
+                padding: 10px 40px;
+                position: relative;
+                background-color: inherit;
+                width: 50%;
+            }
+
+            .container1left::after, .container2right::after, .container3left::after, .container4right::after {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                right: -17px;
+                background-color: #000000;
+                border: 4px solid #ff2176;
+                top: 15px;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            .container1left, .container3left
+            {
+                left: 0;
+            }
+
+            .container2right, .container4right{
+                left: 50%;
+            }
+
+            .container1left::before, .container3left::before 
+            {
+                content: " ";
+                height: 0;
+                position: absolute;
+                top: 22px;
+                width: 0;
+                z-index: 1;
+                right: 30px;
+                border: medium solid #ff2176;
+                border-width: 10px 0 10px 10px;
+                border-color: transparent transparent transparent #ff2176;
+            }
+
+            .container2right::before, .container4right::before 
+            { 
+                content: " ";
+                height: 0;
+                position: absolute;
+                top: 22px;
+                width: 0;
+                z-index: 1;
+                left: 30px;
+                border: medium solid #ff2176;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #ff2176 transparent transparent;
+            }
+
+            .container2right::after, .container4right::after
+            { 
+                left: -16px;
+            }
+
+            .content 
+            {
+                padding: 20px 30px;
+                background-color: #ff2176;
+                position: relative;
+                border-radius: 6px;
+                box-shadow: 0px  3px 2px white;
+            }
+        </style>
+        <!--USING MEDIA QUERIES TO MAKE EDUCATION PAGE RESPONSIVE ANOTHER DEVICES AND DIMENSIONS-->
+        <style>
+            @media screen and (max-width: 600px) 
+            {
+                .timeline::after 
+                {
+                    left: 31px;
+                }
+                .container 
+                {
+                    width: 100%;
+                    padding-left: 70px;
+                    padding-right: 25px;
+                }
+
+                .container1left::before, .container2right::before, .container3left::before, .container4right::before 
+                {
+                    left: 60px;
+                    border: medium solid #ff2176;
+                    border-width: 10px 10px 10px 0;
+                    border-color: transparent transparent transparent#ff2176;;
+                }
+
+                .container1left::after, .container2right::after, .container3left::after, .container4right::after
+                {
+                    left: 15px;
+                }
+
+                .container2right, .container4right 
+                {
+                    left: 0%;
+                }
+            }
+        </style>
+    </section>
+    <!--ADDING SPACE BETWEEN EDUCATION AND EXPERIENCE SECTION-->
+    <section class="blankspace3">
+        <style>
+            .blankspace3
+            {
+            height:120px;
+            }
+        </style>
+    </section>
+
+    <!-----------------------------------------------EXPERIENCE PAGE------------------------------------------------------------->
+    <section id="experiencepage" class="experience">
+        <!--APPLYING COMMON STYLES TO THE WHOLE EXPERIENCE PAGE-->
+        <style>
+            .experience
+            {
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                height:100vh;
+                padding:60px 9% 0;
+                color:rgb(138, 233, 15);
+            }
+        </style>
+        <div class="experience-info">
+            <h1>Experience >> </h1>
+                <p><b>(Present) Social Media Intern @Sojo's Cafe | Content Writer @Travassa Holidays, Mumbai </b></p>
+                <br>
+                <p><b>(Previous) Content Writer @Pehchaan The Street School | Head Girl 2022-23 | Head Girl 2021-22 | <br>CCA Vice Captain 2020-21</b> </p>
+        </div>
+        <style>
+            .experience-info h1
+            {
+                font-size:70px;
+                text-shadow: 2px 5px 8px gray;
+                overflow:hidden;
+                position:relative;
+            }
+        </style>
+        <style>
+            .experience-info p
+            {
+                font-size:20px;
+                margin-top:10px 0 25px;
+                color:white;
+                overflow:hidden;
+                position:relative;
+            }
+        </style>
+
+        <div class="skills-info">
+            <h1> < < Skills</h1>
+                <p><b>Programming: JAVA, HTML, CSS, JS | Canva | Visual Storytelling | Content Writing | Interpersonal  </b></p>
+                <br>
+        </div>
+        <style>
+            .skills-info h1
+            {
+                font-size:70px;
+                text-align:right;
+                text-shadow: 2px 5px 8px gray;
+                overflow:hidden;
+                position:relative;
+            }
+        </style>
+        <style>
+            .skills-info p
+            {
+                font-size:20px;
+                margin-top:10px 0 25px;
+                color:white;
+                overflow:hidden;
+                position:relative;
+                text-align:right;
+            }
+        </style>
+    </section>
+
+    <section class="blankspace4">
+        <style>
+            .blankspace4
+            {
+            height:200px;
+            }
+        </style>
+        <!--ADDING MEDIA QUERIES TO MAKE THE PAGE RESPONSIVE ON DIFFERENT DEVICES AND DIMENSIONS-->
+        <style>
+            
+        </style>
+    </section>
+<!--------------------------------------------------------CONTACT PAGE---------------------------------------------------------->
+
+    <section id="contactpage" class="contact">
+
+        <style>
+            .contact
+            {
+                display:flex;
+                align-items:center;
+                height:110vh;
+                padding:10px 9% 0;
+                color:#ff2176;
+                overflow:hidden;
+                position:relative;
+            }
+        </style>
+
+        <div class="contact-info">
+            <h1> Let's Connect! > > </h1>
+        </div>
+        <style>
+            .contact-info h1
+            {
+                font-size:70px;
+                padding:20px;
+                text-shadow: 2px 2px 10px gray;
+            }
+        </style>
+
+        <div class="containerforform">
+            <form action="action_page.php">
+                <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="Country">Country</label>
+                    <input type="text" id="country" name="country" placeholder="Your country..">
+                <label for="Purpose">Purpose of Contacting</label>
+                    <select id="purpose" name="purpose">
+                        <option value="Project/Collaboration">Project Work/Collaboration</option>
+                        <option value="Request Services">Request Services</option>
+                        <option value="Offer/Proposal">Offer/Proposal</option>
+                        <option value="Other">Other</option>
+                    </select>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <input type="submit" value="Submit">
+            </form>
+
+            <style>
+                input[type=text], select, textarea 
+                {
+                    width: 100%; 
+                    padding: 12px; 
+                    border: 1px solid #ccc; 
+                    border-radius: 4px; 
+                    box-sizing: border-box; 
+                    margin-top: 6px; 
+                    margin-bottom: 16px; 
+                    resize: vertical 
+                }
+
+                input[type=submit] 
+                {
+                    background-color:#ff2176;
+                    color: white;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                input[type=submit]:hover 
+                {
+                    background-color: #8ceb0f;
+                    color:black;
+                }
+
+                .containerforform
+                {
+                    border-radius: 5px;
+                    background-color:#000000;
+                    padding: 20px;
+                    border: 1px solid #ff2176;;
+                }
+            </style>
+        </div>
+        <!--ADDING MEDIA QUERIES TO MAKE THE CONTACT PAGE RESPONSIVE-->
+        <style>
+            
+        </style>
+    </section>
+    <!--ADDING SPACE BEFORE THE PAGE ENDS-->
+    <br>
+    <br>
+    <br>
+</body>
+</html>
